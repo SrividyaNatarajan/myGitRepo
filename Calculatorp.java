@@ -13,9 +13,9 @@ public class Calculatorp {
         Firstnum=0;Secondnum=0;
         do {
             try {
-                System.out.print("Enter first num: ");
+                System.out.print("Enter first number: ");
                 Firstnum = s.nextInt();
-                System.out.print("Enter second num: ");
+                System.out.print("Enter second number: ");
                 Secondnum = s.nextInt();
                 bError = false;
             } 
@@ -48,36 +48,51 @@ public class Calculatorp {
             switch(opt)
             {
                 case 1:
-                    add = Firstnum + Secondnum;
-                    System.out.println("Result:"+add);
+                    Addnum(Firstnum, Secondnum);
                     break;
-                
 
                 case 2:
-                sub = Firstnum - Secondnum;
-                System.out.println("Result:"+sub);
-                break;
+                    Subnum(Firstnum, Secondnum);
+                    break;
  
                 case 3:
-                mul = Firstnum * Secondnum;
-                System.out.println("Result:"+mul);
-                break;
+                    Mulnum(Firstnum, Secondnum);
+                    break;
  
                 case 4:
                 
-                div = (double)Firstnum / Secondnum;
-                System.out.println("Result:"+div);
-                break;    
+                    Divnum(Firstnum, Secondnum);
+                    break;    
  
                 case 5:
-                System.exit(0);
+                    System.exit(0);
 
                 default:
-                System.out.println("Enter a valid no.");
-                break;
+                    System.out.println("Enter a valid no.");
+                    break;
             }
         }
-        
     
     }
+
+    public static void Addnum(int y, int z){
+        int result = y+z;
+        System.out.println("Result:"+result);  
+    }
+
+    public static void Subnum(int y, int z){
+        int result = y-z;
+        System.out.println("Result:"+result);  
+    }
+
+    public static void Mulnum(int y, int z){
+        int result = y*z;
+        System.out.println("Result:"+result);  
+    }
+    
+    public static void Divnum(int y, int z){
+        double result = (double)y / z;
+        System.out.println("Result:"+result);  
+    }
+
 }
